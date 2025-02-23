@@ -2,6 +2,8 @@
 
 - Golang is a compiled language.
 
+- Golang compiles faster than C, C++, RUST, etc.
+
 - Go Tool can run file directly without VM.
 
 - Executables are different for different OS.
