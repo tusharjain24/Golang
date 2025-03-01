@@ -41,6 +41,14 @@ func main(){
 	sort.Ints(highScores)
 	fmt.Println("Sorted HighScores: ", highScores)
 	fmt.Println("Is highScores sorted: ", sort.IntsAreSorted(highScores))
+
+	// Remove values from slices based on the index.
+	var courses = []string{"react.js", "javascript", "golang", "python", "DSA"}
+	fmt.Println("Courses: ", courses)
+
+	var index int = 4
+	courses=append(courses[:index], courses[index+1:]...)
+	fmt.Printf("Printing courses after removing index %d: %v\n", index, courses)
 }
 
 // Methods available for slices in Golang are: append, sort, colon[:] (For Slicing)

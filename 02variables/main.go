@@ -1,11 +1,39 @@
-package main
-
-import (
-	"fmt"
-)
-
 /*
 
+* In Go, the fmt package provides various formatting verbs that you can use with functions like Printf to format your output. Here are explanations for `%d` and `%v`:
+
+*- **`%d`**: This verb is used to format integers in base 10. It stands for "decimal" and is commonly used when you want to print integer values.
+
+*- **`%v`**: This verb is the "default format" for the value. It is a versatile verb that can be used to print any value in a default format that makes sense for the type of the value. For example, it will print integers as numbers, strings as quoted strings, and slices or arrays in a readable format.
+
+In your code:
+```go
+fmt.Printf("Printing courses after removing index %d: %v\n", index, courses)
+```
+- `%d` is used to print the
+
+index
+
+ variable, which is expected to be an integer.
+- `%v` is used to print the courses variable, which could be a slice or any other type, and it will be printed in a default, human-readable format.
+
+Here's a breakdown of the line:
+- `"Printing courses after removing index %d: %v\n"` is the format string.
+-
+
+index is the integer value that will replace `%d`.
+-
+
+courses is the value that will replace `%v`.
+
+This will result in an output like:
+```
+Printing courses after removing index 3: [course1 course2 course4]
+```
+assuming index is `3` and courses is a slice of strings.
+*/
+
+/*
 * '%T' is a placeholder to find the type of a variable.
 * 'Printf()' is a statement where we can write formatted string but we cannot write formatted string in Println() statement.
 * For both types int and float the init value of their value is '0'.
@@ -22,6 +50,12 @@ import (
 
 * A number can be given a type by using it in a context that requires one, such as a variable assignment or function call. For example, here math.Sin expects a float64.
 */
+
+package main
+
+import (
+	"fmt"
+)
 
 const LoginToken string = "qwertyuiop12345g"
 func main(){
