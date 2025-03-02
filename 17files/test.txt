@@ -1,0 +1,2 @@
+Hello, World! 
+ This is a file handling in Golang. We are writing this content to a file.
